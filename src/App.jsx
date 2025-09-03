@@ -9,13 +9,14 @@ import Skills from "./sections/Skills";
 import Education from "./sections/Education";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     // FIX: Dejé un solo wrapper <div>. Había DOS contenedores raíz con gradientes.
     //      Mantengo el gradiente más “lindo” (br diagonal).
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-sky-50 to-rose-50 text-slate-900">
-      {/* Navbar sticky */}
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-sky-50 to-rose-50 text-slate-900 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 dark:text-slate-100">
+      {/* Navbar sticky */}\n      <Navbar />
       {/* FIX: Había dos <header> consecutivos. Dejo UNO solo y con la variante más completa. */}
       <header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-white/20 shadow-sm">
         <nav className="max-w-5xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-14">

@@ -8,7 +8,7 @@ function Card({ title, value, href }) {
       href={href}
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel="noreferrer"
-      className="block rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition-shadow"
+      className="card hover:shadow-md transition-shadow"
     >
       <p className="text-xs uppercase tracking-wide text-slate-500">{title}</p>
       <p className="mt-1 font-medium break-words">{value}</p>

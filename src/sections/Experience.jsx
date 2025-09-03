@@ -10,7 +10,7 @@ export default function Experience() {
   return (
     <Section id="experience" title="Experiencia">
       <div className="relative">
-        <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-slate-200" />
+        <div className="absolute left-4 sm:left-6 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-800" />
         <ul className="space-y-8">
           {experience.map((item, idx) => (
             <li key={idx} className="relative pl-10 sm:pl-12">
@@ -20,7 +20,7 @@ export default function Experience() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl border p-5 shadow-sm"
+                className="card"
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="font-semibold text-lg">{item.role}</h3>

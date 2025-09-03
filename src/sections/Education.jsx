@@ -17,7 +17,7 @@ export default function Education() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl border p-5 shadow-sm"
+            className="card"
           >
             <p className="font-medium">{e.title}</p>
             <p className="text-sm text-slate-600 mt-1">{e.org}</p>
