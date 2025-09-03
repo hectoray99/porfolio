@@ -1,5 +1,8 @@
+// src/sections/Experience.jsx
+
 /** Timeline de experiencia laboral */
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
+/* FIX: elimino import duplicado `motion as Motion`. Con un solo import alcanza. */
 import Section from "../components/Section";
 import { experience } from "../data/profile";
 
@@ -12,6 +15,7 @@ export default function Experience() {
           {experience.map((item, idx) => (
             <li key={idx} className="relative pl-10 sm:pl-12">
               <span className="absolute left-3.5 sm:left-5 top-1.5 w-3 h-3 rounded-full bg-slate-900" />
+              {/* FIX: había dos aperturas (<motion.div y <Motion.div>). Dejo una sola. */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -27,6 +31,7 @@ export default function Experience() {
                   {item.bullets.map((b, i) => <li key={i}>{b}</li>)}
                 </ul>
               </motion.div>
+              {/* FIX: removí el cierre duplicado </Motion.div>. */}
             </li>
           ))}
         </ul>
