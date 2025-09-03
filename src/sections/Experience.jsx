@@ -1,5 +1,5 @@
 /** Timeline de experiencia laboral */
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import Section from "../components/Section";
 import { experience } from "../data/profile";
 
@@ -12,7 +12,7 @@ export default function Experience() {
           {experience.map((item, idx) => (
             <li key={idx} className="relative pl-10 sm:pl-12">
               <span className="absolute left-3.5 sm:left-5 top-1.5 w-3 h-3 rounded-full bg-slate-900" />
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -26,7 +26,7 @@ export default function Experience() {
                 <ul className="list-disc pl-5 mt-3 space-y-1 text-slate-700">
                   {item.bullets.map((b, i) => <li key={i}>{b}</li>)}
                 </ul>
-              </motion.div>
+              </Motion.div>
             </li>
           ))}
         </ul>
